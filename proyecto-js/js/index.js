@@ -1,54 +1,27 @@
-/*
+const preguntas = [
+    {
+        numero: 1,
+        pregunta: "¿Cuánto es 2 + 2?",
+        respuestaCorrecta: 4
+    },
+    {
+        numero: 2,
+        pregunta: "¿Cuántos lados tiene un triángulo?",
+        respuestaCorrecta: 3
+    },
+    {
+        numero: 3,
+        pregunta: "¿Cuál es la raíz cuadrada de 25?",
+        respuestaCorrecta: 5
+    }
+];
+
 const chequeoRespuesta = (respuestaCorrecta, pregunta) => {
-    let respuesta = prompt(pregunta).toLowerCase();
+    let respuesta = parseInt(prompt(pregunta));
 
-    while(respuesta !== "no" && respuesta !== "si") {
-        alert("Respuesta inválida, solo debe responder por sí o por no");
-        respuesta = prompt(pregunta).toLowerCase();
-    }
-
-    if(respuesta === respuestaCorrecta) {
-        alert("Respuesta correcta")
-    }
-    else{
-        alert("Respuesta incorrecta");
-    }
-};
-for (let i = 0; i <= 3; i++) {
-    let pregunta;
-    let respuestaCorrecta;
- 
-    switch(i) {
-        case 1:
-            pregunta = "Por sí o por no, ¿El mate se toma amargo?"
-            respuestaCorrecta = "si";
-            chequeoRespuesta(respuestaCorrecta, pregunta);
-            break;
-        case 2:
-            pregunta = "Por sí o por no, ¿Se comen primero las papas y luego la hamburguesa?"
-            respuestaCorrecta = "si";
-            chequeoRespuesta(respuestaCorrecta, pregunta);
-            break;
-        case 3:
-            pregunta = "Por sí o por no, ¿Mates con chipas?"
-            respuestaCorrecta = "si";
-            chequeoRespuesta(respuestaCorrecta, pregunta);
-            break;
-        default:
-            alert("Encuesta de preguntas por sí o por no");
-            break;
-
-    }
-
-
-}
-*/ 
-const chequeoRespuesta = (respuestaCorrecta, pregunta) => {
-    let respuesta = prompt(pregunta).toLowerCase();
-
-    while (respuesta !== "no" && respuesta !== "si") {
-        alert("La respuesta es incorrecta, solo debe responder por sí o por no");
-        respuesta = prompt(pregunta).toLowerCase();
+    while (isNaN(respuesta)) {
+        alert("Respuesta inválida, ingresa un número válido");
+        respuesta = parseInt(prompt(pregunta));
     }
 
     if (respuesta === respuestaCorrecta) {
@@ -58,32 +31,13 @@ const chequeoRespuesta = (respuestaCorrecta, pregunta) => {
     }
 };
 
-const hacerPregunta = (pregunta, respuestaCorrecta) => {
+const hacerPregunta = (numero, pregunta, respuestaCorrecta) => {
+    alert(`Pregunta #${numero}: ${pregunta}`);
     chequeoRespuesta(respuestaCorrecta, pregunta);
 };
 
-for (let i = 1; i <= 3; i++) {
-    let pregunta;
-    let respuestaCorrecta;
-
-    switch (i) {
-        case 1:
-            pregunta = "Por sí o por no, ¿El mate se toma amargo?";
-            respuestaCorrecta = "si";
-            hacerPregunta(pregunta, respuestaCorrecta);
-            break;
-        case 2:
-            pregunta = "Por sí o por no, ¿Se comen primero las papas y luego la hamburguesa?";
-            respuestaCorrecta = "si";
-            hacerPregunta(pregunta, respuestaCorrecta);
-            break;
-        case 3:
-            pregunta = "Por sí o por no, ¿Mates con chipas?";
-            respuestaCorrecta = "si";
-            hacerPregunta(pregunta, respuestaCorrecta);
-            break;
-        default:
-            alert("Encuesta de preguntas por sí o por no");
-            break;
-    }
+for (let i = 0; i < preguntas.length; i++) {
+    const preguntaActual = preguntas[i];
+    hacerPregunta(preguntaActual.numero, preguntaActual.pregunta, preguntaActual.respuestaCorrecta);
 }
+
