@@ -1,3 +1,4 @@
+
 const preguntas = [
     {
         numero: 1,
@@ -40,4 +41,6 @@ for (let i = 0; i < preguntas.length; i++) {
     const preguntaActual = preguntas[i];
     hacerPregunta(preguntaActual.numero, preguntaActual.pregunta, preguntaActual.respuestaCorrecta);
 }
+
+
 
