@@ -1,11 +1,4 @@
-// Funciones globales
 
-
-// Sección de usuarios 
-
-// Sección de mascotas
-
-// Sección de menus
 let userId = 1;
 let usuarios = [];
 
@@ -22,17 +15,23 @@ const agregarUsuario = (usuario) => {
    usuarios.push(usuario);
    userId++
 };
-const eliminarUsuario = () => {
-    
-};
-const mostrarUsuario = () => {
-    let nombreUsuario = usuario.map( usuario => `ID: ${usuario.id} - Nombre: ${usuario.nombre}`);
-    if (nombreUsuario.length > 0){
-     alert(nombreUsuario.join("\n"))
-    } else { 
-        alert("No hay usuarios registrados");
+const eliminarUsuario = ( id ) => {
+    let existe = usuarios.some ( usuario => usuario.id === id)
+    if(existe){
+        usuarios = usuarios.filter(usuario => usuario.id !== id);
+    } else {
+        alert("No existe ningún usuario con ese ID")
     }
 };
+
+const mostrarUsuario = () => {
+        let nombreUsuario = usuarios.map (usuario => `ID: ${usuario.id} - Nombre: ${usuario.nombre}`);
+        if (nombreUsuario.length > 0) {
+        alert(nombreUsuario.join("\n"))
+        } else { 
+            alert("No hay usuarios registrados");
+        }
+ };
 
 const menuUsuario = () => {
     let estado = true;
@@ -81,7 +80,7 @@ const menuPrincipal = () => {
     while (encendido){
         let opcion = parseInt(
             prompt( `
-            Bienvenido a nuestra Aplicación de adopción de mascotas
+            Bienvenidx a nuestra aplicación de mascotas
             1- Opciones de usuarios
             2- Opciones de mascota
             3- Salir
