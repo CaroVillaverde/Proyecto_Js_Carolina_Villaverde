@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content=" ">
+     <meta name="keywords" content="">
+     <title> Proyecto JS</title>
+      <!-- fontawesome-->
+      <script src="https://kit.fontawesome.com/13e182d6ae.js" crossorigin="anonymous"></script>
+           <!--hojas de estilo-->
+     <link rel="stylesheet" href="./css/styles.css">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+   </head>
+   <body>  
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light header flexible">
+          <!--logo-->
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container-icon">
+          <div class="container-cart-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-cart"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+          </div>
+  
+          <div class="container-cart-products hidden-cart">
+            <div class="row-product hidden">
+              <div class="cart-product">
+                <div class="info-cart-producto">
+                  <span class="cantidad-producto-carrito">1</span>
+                  <p class="titulo-producto-carrito">Zapatos Nike</p>
+                  <span class="precio-producto-carrito">$80</span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon-close"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+            </div>
+  
+            <div class="cart-total hidden">
+              <h3>Total:</h3>
+              <span class="total-pagar">$200</span>
+            </div>
+            <p class="cart-empty">El carrito está vacío</p>
+          </div>
+        </div>
+      </header> 
+      
+      <main>
+        <h1 class="tituloPrincipal"> Bienvenidos </h1>
+        
+      </main>
+      <footer>
+       
+        <ul class="social-icons">
+            <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li>
+                <a href="./index.html">Inicio</a>
+                <a href="./pages/nosotros.html">Nosotros</a>
+                <a href="./pages/info.html">Info</a>
+                <a href="./pages/contacto.html">Contacto</a>
+            </li>
+        </ul>  
+      </footer>
+      <script src="./js/index.js"></script>
+</body>
+</html>
